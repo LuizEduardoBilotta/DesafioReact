@@ -1,41 +1,55 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Wrapper, Container } from './App.styles'
 import AppHeader from '../AppHeader'
 import AppContainer from '../AppContainer'
-import Checkbox from '../../shared/Checkbox'
+import LineChart from '../../shared/LineChart/LineChart'
+import ShoppingList from '../ShoppingList'
+import productsMock from '../../mocks/products.json'
 
 function App () {
+    const colors = ['#62CBC6', '#00ABAD', '#00858C', '#006073', '#004D61']
 
-    const [letucce, setLetucce] = useState(false);
-    const [rice, setRice] = useState(false);
+    const [products, setProducts] = useState(productsMock.products);
+    const [selectedProducts, setSelectedProducts] = useState([]);
+    
+    useEffect(() => {
+        const newSelectedProducts = products
+            .filter(product => product.checked)
+
+            setSelectedProducts(newSelectedProducts)
+    }, [products])
+
+    function handleToggle(id) {
+        const newProducts = products.map(product => 
+            product.id === id
+                ? { ...product, checked: !product.checked}
+                : product
+        )
+        setProducts(newProducts);
+    }
 
     return <Wrapper>
         <Container>
             <AppHeader />
             <AppContainer 
-                left={<div>
-                    Produtos disponíveis 
+                left={<ShoppingList 
+                    title="Produtos disponíveis"
+                    products={products} 
+                    onToggle={handleToggle}
+                />} 
 
-                    <Checkbox 
-                    value={letucce}
-                    title="Alface"
-                    onclick={() => setLetucce(!letucce)}
-                    />
-
-                    <Checkbox 
-                    value={rice}
-                    title="Arroz"
-                    onclick={() => setRice(!rice)}
-                    />
-
-                </div>}
-
-                middle={<div>
-                    Sua lista de compras
-                </div>}
+                middle={<ShoppingList 
+                    title="Sua lista de compras"
+                    products={selectedProducts} 
+                />}
 
                 right={<div>
-                    Estatísticas    
+                    Estatísticas 
+
+                    <LineChart color={colors[0]} title="saudável" percentage={80} />   
+                    <LineChart color={colors[1]} title="não tão saudável assim" percentage={20} />
+                    <LineChart color={colors[2]} title="limpeza" percentage={35} />
+                    <LineChart color={colors[3]} title="outros" percentage={15} />
                 </div>}
             />
         </Container>
