@@ -6,6 +6,7 @@ import LineChart from '../../shared/LineChart/LineChart'
 import ShoppingList from '../ShoppingList'
 import productsMock from '../../mocks/products.json'
 import extractPercentage from '../../utils/extractPercentage'
+import Calculator from '../Calculator/Calculator'
 
 function App () {
     const colors = ['#62CBC6', '#00ABAD', '#00858C', '#006073', '#004D61']
@@ -106,6 +107,7 @@ function App () {
                                 minimumFractionDigits: 2, style: 'currency', currency: 'BRL'
                             }) }
                         </div>
+                        <Calculator />
                     </div>
 
                 </div>}
