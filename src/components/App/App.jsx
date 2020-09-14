@@ -11,14 +11,13 @@ import ShoppingList from '../ShoppingList'
 
 import extractPercentage from '../../utils/extractPercentage'
 
-import { selectAllProducts, selectSelectedProducts, selectSelectedProductsTotalPrice } from '../../store/Products/Products.selectors'
+import { selectSelectedProducts, selectSelectedProductsTotalPrice } from '../../store/Products/Products.selectors'
 import { toggleProduct } from '../../store/Products/Products.actions'
 
 function App () {
     const dispatch = useDispatch();
     const colors = ['#62CBC6', '#00ABAD', '#00858C', '#006073', '#004D61']
 
-    const products = useSelector(selectAllProducts)
     const selectedProducts = useSelector(selectSelectedProducts)
     const totalPrice = useSelector(selectSelectedProductsTotalPrice)
 
@@ -31,14 +30,14 @@ function App () {
             <AppHeader />
             <AppContainer 
                 left={<ShoppingList 
-                    title="Produtos disponíveis"
-                    products={products} 
+                    title="Produtos disponíveis" 
                     onToggle={handleToggle}
                 />} 
 
                 middle={<ShoppingList 
                     title="Sua lista de compras"
-                    products={selectedProducts} 
+                    displayOnlySelected
+                    onToggle={handleToggle} 
                 />}
 
                 right={<div>
