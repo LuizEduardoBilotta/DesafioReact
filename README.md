@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img src="./screenshots/002.jpg" alt="Banner Alga Shopping"/>
+</h1>
 
-## Available Scripts
+<h2 align="center">Alga Shopping</h2>
+<p> 
+  O <strong>Alga Shopping</strong> é uma aplicação Web de uma lista de compras com estatísticas em tempo real para prática de React, Hooks e Redux.
+  
+  O Projeto foi desenvolvido durante as lives do <strong>#DesafioReact</strong> da [@AlgaWorks](https://algaworks.com).
+</p>
 
-In the project directory, you can run:
+## :dart: Índice
+- [Status](#status)
+- [Layout](#layout)
+- [Tecnologias](#tecnologias)
+- [Pré-Requisitos](#pre-requisitos)
+- [Executando o projeto](#executando-o-projeto)
+- [Licença](#licença)
 
-### `npm start`
+## :game_die: Status
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/LuizEduardoBilotta/DesafioReact?style=for-the-badge" alt="Repository size">
+  <img src="https://img.shields.io/github/license/LuizEduardoBilotta/DesafioReact?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/languages/count/LuizEduardoBilotta/DesafioReact?style=for-the-badge&color=eb152a" alt="Counter Languages">
+  <img src="https://img.shields.io/github/last-commit/LuizEduardoBilotta/DesafioReact?style=for-the-badge&color=f50cbb" alt="Last commit">
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :framed_picture: Layout
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<img src="./screenshots/001.jpg" alt="Aplicação Alga Shopping" title="Alga Shopping">
+<img src="./screenshots/002.jpg" alt="Aplicação Alga Shopping" title="Alga Shopping reagindo aos eventos">
 
-### `npm test`
+## :toolbox: Tecnologias
+- [Node.js](https://nodejs.org/)
+- [React](https://reactjs.org)
+- [Javascript](https://www.javascript.com/)
+- [Redux-persist](https://github.com/rt2zz/redux-persist/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :heavy_check_mark: Pré-requisitos
+Antes de iniciar, certifique-se que tenha instalado em seu computador as seguintes ferramentas:
+- [Node.js](https://nodejs.org/)
+- [Visual Studio Code](https://visualstudio.microsoft.com/pt-br/)
 
-### `npm run build`
+## :gear: Executando o projeto
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**OBS:** O projeto possui duas `branches`, que serão descritas abaixo:      
+  ***-Master:*** Versão do projeto utilizando Hooks, com a lógica agrupado no arquivo principal.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+  ***-Redux:*** Versão do projeto utilizando Redux, distribuindo as responsabilidades no projeto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. *Faça um clone do repositório:*
 
-### `npm run eject`
+```sh
+$ git clone https://github.com/LuizEduardoBilotta/DesafioReact
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. *Siga as etapas abaixo:*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+# Acesse o diretório do projeto terminal:
+$ cd DesafioReact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Instale as dependências:
+$ npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Execute a aplicação:
+$ npm start
+```
 
-## Learn More
+**OBS:** Caso não inicie a aplicação automaticamente em seu navegador, acesse manualmente digitando na barra de endereços: `localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :bookmark_tabs: Licença
+Este projeto está licenciado nos termos da licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :jigsaw: Contato
+- :mailbox_with_mail: E-mail: <a href="mailto:luizeduardobilotta@gmail.com">luizeduardobilotta@gmail.com</a>
+- :pushpin: Linkedin: [in/luizeduardobilotta](https://www.linkedin.com/in/luizeduardobilotta)
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<sup>Desenvolvido por <i><strong>Luiz Eduardo Bilotta.</i></strong></sup>
