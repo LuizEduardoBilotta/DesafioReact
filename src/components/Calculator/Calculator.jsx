@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import{ subtract, sum } from '../../store/Calculator/Calculator.actions'
+import { subtract, sum } from '../../store/Calculator/Calculator.actions'
+import { Wrapper } from './Calculator.styles'
 
 function Calculator() {
     const dispatch = useDispatch()
@@ -9,8 +10,10 @@ function Calculator() {
     const [a, setA] = useState(0)
     const [b, setB] = useState(0)
 
-    return <>
-        
+    return <Wrapper>
+        <div style={{fontSize: 12}}>
+            Calculadora:
+        </div>    
         <input 
             type="text" 
             placeholder="a"
@@ -21,17 +24,18 @@ function Calculator() {
             placeholder="b"
             value={b}
             onChange={(e) => setB(Number(e.target.value))} />
-        <br />
         <button 
         onClick={() => {dispatch(sum(a, b))}}
         >Somar</button>
         <button
         onClick={() => {dispatch(subtract(a, b))}}
         >Subtrair</button>
-        <div>
-            {result}
+        <div style={{fontSize: 24}}>
+            {result.toLocaleString('pt-br', {
+                minimumFractionDigits: 2, style: 'currency', currency:'BRL'
+            })}
         </div>
-    </>
+    </Wrapper>
 }
 
 export default Calculator

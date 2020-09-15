@@ -93,7 +93,9 @@ function App () {
                                 minimumFractionDigits: 2, style: 'currency', currency: 'BRL'
                             }) }
                         </div>
-                        <Calculator />
+                        <div>
+                            <Calculator />
+                        </div>    
                     </div>
 
                 </div>}
